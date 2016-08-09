@@ -1,0 +1,7 @@
+# console debuging 
+# to get service instance do 
+angular.element(document).injector().get('serviceName')
+# to get scope of an element do 
+angular.element(document.body).scope()
+# to refresh angular from console call 
+angular.element(document.body).scope().$apply()
