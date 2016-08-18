@@ -14,3 +14,6 @@ exitstatus()
   fi
 }
 export PS1="[$(free_mem)][\W]$(exitstatus) "
+
+# show happy face
+export PS1="\`if [ \$? = 0 ]; then echo \[\e[33m\]^_^\[\e[0m\]; else echo \[\e[31m\]O_O\[\e[0m\]; fi\` "
