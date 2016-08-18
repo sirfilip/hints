@@ -1,0 +1,16 @@
+# show free memory
+free_mem()
+{
+  awk '/MemFree/{print $2}' /proc/meminfo
+}
+
+# show the exit status
+exitstatus()
+{
+  if [[ $? == 0 ]]; then
+    echo ':)'
+  else
+    echo 'D:'
+  fi
+}
+export PS1="[$(free_mem)][\W]$(exitstatus) "
