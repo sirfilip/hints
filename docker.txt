@@ -1,0 +1,2 @@
+# to install and run image do
+docker run ubuntu pwd
