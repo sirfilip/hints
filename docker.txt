@@ -18,3 +18,18 @@ $ docker run --link container_name -i -t ubuntu /bin/bash
 
 # to map ports use
 $ docker run -p 4567:4567 some-web-app-image
+
+# to map exposed ports to random available ports on the machine use -P
+$ docker run -P some-web-app-image
+
+# to check the port that is bound use
+$ docker port container_name
+
+# to pass environment variable use -e
+$ docker run -e "VARNAME=VARVALUE" ubuntu
+
+# to check the output of container use
+$ docker logs -f container_id_or_name
+
+# to start container with restart policy unless stopped or killed use
+$ docker run ubuntu --restart unless-stopped
