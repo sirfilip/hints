@@ -1,2 +1,20 @@
 # to install and run image do
-docker run ubuntu pwd
+$ docker run ubuntu pwd
+
+# to check running containers do 
+$ docker ps
+
+# to list all containers add -a
+$ docker ps -a
+
+# to stop a container do 
+$ docker stop sha_or_container_name
+
+# to restart a container do
+$ docker restart container_id_or_name
+
+# to link existing container with another container just use the container name
+$ docker run --link container_name -i -t ubuntu /bin/bash
+
+# to map ports use
+$ docker run -p 4567:4567 some-web-app-image
