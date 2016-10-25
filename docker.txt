@@ -33,3 +33,9 @@ $ docker logs -f container_id_or_name
 
 # to start container with restart policy unless stopped or killed use
 $ docker run ubuntu --restart unless-stopped
+
+# to check the last started container do
+$ docker ps -l
+
+# to check out container ip address use
+$ docker inspect --format='{{.NetworkSettings.IPAddress}}' container_name
