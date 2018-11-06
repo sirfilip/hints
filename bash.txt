@@ -31,3 +31,6 @@ git_branch() {
 	git branch 2>/dev/null | grep '^*' | colrm 1 2
 }
 export PS1="\[\e[0;32m\$(git_branch)\e[m\]$ "
+
+# to see if a file is occupied by a process check with
+$ ls -f -- filename
