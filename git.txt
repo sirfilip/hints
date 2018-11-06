@@ -1,0 +1,11 @@
+# to diff files between branch and master use
+$ git diff master -- filename.txt
+
+# to remove remote branch use
+$ git push origin :branch-name
+
+# to grep in history for change use
+$ git log -p | grep change
+
+# to create branch use
+$ git checkout -b branch-name

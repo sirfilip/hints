@@ -1,0 +1,14 @@
+# To search for a field value use
+field: value
+
+# To search for a range use
+field: [start TO end]
+
+# to search for contens of a field use
+field:"Content"
+
+# to search for a negated value use
+-field:query
+
+# to combne searches use
+field1:thing1 AND field2:thing2 OR etc....

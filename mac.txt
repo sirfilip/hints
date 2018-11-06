@@ -1,0 +1,2 @@
+# to force quit use
+Cmd+Option+Esc

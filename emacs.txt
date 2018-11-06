@@ -1,0 +1,13 @@
+;; to go to next line and indent
+M-j
+
+;; to autocomplete word use
+M-/
+
+;; to undo use
+C-/
+
+;; to search use
+C-s
+
+;; move with C-n C-p C-b C-f M-f M-b

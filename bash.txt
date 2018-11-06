@@ -1,0 +1,33 @@
+# magic vars
+$0 - The name of the Bash script.
+$1 - $9 - The first 9 arguments to the Bash script. (As mentioned above.)
+$# - How many arguments were passed to the Bash script.
+$@ - All the arguments supplied to the Bash script.
+$? - The exit status of the most recently run process.
+$$ - The process ID of the current script.
+$USER - The username of the user running the script.
+$HOSTNAME - The hostname of the machine the script is running on.
+$SECONDS - The number of seconds since the script was started.
+$RANDOM - Returns a different random number each time is it referred to.
+$LINENO - Returns the current line number in the Bash script.
+
+# to capture a command output use
+foo=$( a command here )
+
+# to get user input use
+read -p "Tell me something " something
+echo $something
+
+# to get secret input use
+read -sp "Tell me a secret" secret
+
+# to define a function use 
+funcName() {
+	# do your stuff here...
+}
+
+# git prompt. Note the usage of the \[ and \] at the end that prevent prompt mess when going through history
+git_branch() {
+	git branch 2>/dev/null | grep '^*' | colrm 1 2
+}
+export PS1="\[\e[0;32m\$(git_branch)\e[m\]$ "
