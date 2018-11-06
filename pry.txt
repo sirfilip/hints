@@ -1,0 +1,42 @@
+# clear the buffer with !
+pry> do something silly
+pry>!
+
+# to suppress the output use ;
+pry> "something" * 10_000;
+
+# show contents of the input
+pry> show-input
+
+# to use an editor when defining methods and classes use 
+pry> edit
+
+# to use shell commands just prefix them with .
+pry> .ls
+
+# to go to the gem directory use gem-cd
+pry> gem-cd rails
+
+# to checkout the source of some implementation use show-source or $
+pry> show-source String
+pry> show-source String#downcase
+pry> $ String#downcase
+
+# can view the source of the pry commands
+pry> show-source gem-list
+
+# to view the documentation use show-doc or ?
+pry> show-doc Net::HTTP
+pry> ? Net::HTTP
+
+# last result is stored inside _
+
+# input and output cache are stored inside _in_ and _out_
+
+# current pry instance _pry_
+
+# to check the backtrace of an exception use 
+pry> wtf?
+
+# use cat --ex [frameNum] to navigate to the code where the exception occured
+pry> cat --ex 

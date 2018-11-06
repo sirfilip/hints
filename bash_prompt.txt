@@ -1,0 +1,27 @@
+# show free memory
+free_mem()
+{
+  awk '/MemFree/{print $2}' /proc/meminfo
+}
+
+parse_git_branch()
+{
+    git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/*\(.*\)/(\1 )/'
+}
+
+# show the exit status
+exitstatus()
+{
+  if [[ $? == 0 ]]; then
+    echo ':)'
+  else
+    echo 'D:'
+  fi
+}
+export PS1="[$(free_mem)][\W]$(exitstatus) "
+
+# show happy face
+export PS1="\`if [ \$? = 0 ]; then echo \[\e[33m\]^_^\[\e[0m\]; else echo \[\e[31m\]O_O\[\e[0m\]; fi\` "
+
+# show happy face git branch and folder
+export PS1="\`if [ \$? = 0 ]; then echo \[\e[32m\]^_^\[\e[0m\]; else echo \[\e[31m\]O_O\[\e[0m\]; fi\`[\W]\$(parse_git_branch) "
