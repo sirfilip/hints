@@ -12,3 +12,34 @@ field:"Content"
 
 # to combne searches use
 field1:thing1 AND field2:thing2 OR etc....
+
+# can use json query syntax
+{"query":{"match_phrase":{"request_uri":"platform=android"}}}
+
+# or even
+{
+  "query": {
+    "bool" : {
+      "must" : {
+        "term" : { "user" : "kimchy" }
+      },
+      "filter": {
+        "term" : { "tag" : "tech" }
+      },
+      "must_not" : {
+        "range" : {
+          "age" : { "gte" : 10, "lte" : 20 }
+        }
+      },
+      "should" : [
+        { "term" : { "tag" : "wow" } },
+        { "term" : { "tag" : "elasticsearch" } }
+      ],
+      "minimum_should_match" : 1,
+      "boost" : 1.0
+    }
+  }
+}
+
+# quick search
++field:value and +textfield:(-word and +word) 
