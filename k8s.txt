@@ -1,0 +1,48 @@
+# to see all pods labeled with service=tier do
+kubectl get pods --selector tier=service
+kubectl get pods -l labelname=labelvalue
+
+# to negate search use
+kubectl get pods -l labelname!=labelvalue
+
+# to search by multiple labels use
+kubectl get pods -l labelname=labelbalue,other=othervalue
+
+# to see all labels use
+kubectl get pods --show-labels
+
+# to remove a label do
+kubectl label pod/some-pod labelname-
+
+# to change a label do
+kubectl label pod/some-pod labelname=labelvalue --overwrite
+
+# to start minikube do
+minikube start
+
+# to see service in browser use
+minikube service service-name
+
+# to see the dashboard do
+minikube dashboard
+
+# to see all versions do
+kubectl rollout history deployment/gin-web
+
+# to revert change do
+kubectl rollout undo deployment/gin-web
+
+# to see deployment stats use
+kubectl describe depolyment deployment-name
+
+# to get logs from a pod use
+kubectl logs podname
+
+# to start bash shell use
+kubectl exec -it podname /bin/bash
+
+# to see minikube addons status use
+minikube addons list
+
+# to edit object do 
+kubectl edit cronjob/jobname

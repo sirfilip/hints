@@ -1,0 +1,6 @@
+# set client that do not follow redirects
+client := &http.Client{
+	CheckRedirect: func(req *http.Request, via []*http.Request) error {
+		return http.ErrUseLastResponse
+	},
+}
