@@ -20,6 +20,18 @@ kubectl label pod/some-pod labelname=labelvalue --overwrite
 # to start minikube do
 minikube start
 
+# to stop minikube do
+minikube stop
+
+# to delete minikube / reset
+minikube delete
+
+# switch to minikube context
+eval $(minikube docker-env)
+
+# to switch the context back
+eval $(docker-machine env -u)
+
 # to see service in browser use
 minikube service service-name
 
