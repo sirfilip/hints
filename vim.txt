@@ -1,0 +1,3 @@
+To navigate help use
+CTRL-] to follow link
+CTRL-O to go back

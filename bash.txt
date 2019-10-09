@@ -34,3 +34,7 @@ export PS1="\[\e[0;32m\$(git_branch)\e[m\]$ "
 
 # to see if a file is occupied by a process check with
 $ ls -f -- filename
+
+# to execute shell script received as text do
+$ sh -c "echo 'one two three'"
+
