@@ -12,3 +12,28 @@ switch obj.(type) {
 	case string:
 		// take care of string
 }
+
+# methods example
+package main
+
+import "fmt"
+
+type Thing struct {
+	Name string
+}
+
+func (t Thing) GetName() string {
+	return t.Name
+}
+
+func (t *Thing) SetName(name string) {
+	t.Name = name
+}
+
+func main() {
+	t := Thing{"Filip"}
+	fmt.Println(t.GetName())
+
+	(&t).SetName("sirfilip")
+	fmt.Println(t.GetName())
+}
