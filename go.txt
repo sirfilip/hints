@@ -4,3 +4,11 @@ client := &http.Client{
 		return http.ErrUseLastResponse
 	},
 }
+
+# type hint switch for interfaces
+switch obj.(type) {
+	case int:
+		// take care of int
+	case string:
+		// take care of string
+}
