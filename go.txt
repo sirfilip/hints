@@ -47,3 +47,9 @@ func main() {
 $ go tool pprof name_of_the_binary pprof-out
 
 // note that larger boxes mean more time spent in execution
+
+// to run a memory profiler do
+$ go test -run=XXX -bench=. -memprofile=m.p
+
+// to run a cpu profile do
+$ go test -run=XXX -bench=. -cpuprofile=c.p
