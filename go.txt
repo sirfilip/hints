@@ -53,3 +53,6 @@ $ go test -run=XXX -bench=. -memprofile=m.p
 
 // to run a cpu profile do
 $ go test -run=XXX -bench=. -cpuprofile=c.p
+
+// to check the goroutine blocking do a blocking profile
+$ go test -run=XXX -bench=. -blockprofile=b.p
