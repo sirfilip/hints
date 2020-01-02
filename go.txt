@@ -56,3 +56,14 @@ $ go test -run=XXX -bench=. -cpuprofile=c.p
 
 // to check the goroutine blocking do a blocking profile
 $ go test -run=XXX -bench=. -blockprofile=b.p
+
+// to avoid compiler optimizations do this when benchmarking
+// var Result int
+//  
+// func BenchmarkSomeFunction(b *testing.B) {
+//     var res int
+//     for n := 0; n < b.N; n++ {
+//         res = functionUnderBenchmarkThatReturnsInt()
+//     }
+//     Result = res
+// }
