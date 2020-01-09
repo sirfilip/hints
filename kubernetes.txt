@@ -1,0 +1,5 @@
+# to see all of the defined resources use
+$ kubectl api-resources
+
+# to use local docker images on minikube do
+$ eval $(minikube docker-env)
