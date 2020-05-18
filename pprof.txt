@@ -1,0 +1,8 @@
+# pprof golang programs
+$ go tool pprof out.dump
+
+(pprof) top10 # lists top 10 nodes
+
+(pprof) list method_name # lists method name
+
+(pprof) web # opens web browser and shows svg

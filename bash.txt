@@ -1,7 +1,15 @@
+# to get help of tests available do
+help test
+
+# to debug do
+set -x # activate x trace
+set -e # stop on error
+
 # magic vars
 $0 - The name of the Bash script.
 $1 - $9 - The first 9 arguments to the Bash script. (As mentioned above.)
 $# - How many arguments were passed to the Bash script.
+$* - All of the arguments quoted
 $@ - All the arguments supplied to the Bash script.
 $? - The exit status of the most recently run process.
 $$ - The process ID of the current script.
@@ -38,3 +46,8 @@ $ ls -f -- filename
 # to execute shell script received as text do
 $ sh -c "echo 'one two three'"
 
+# to log something do
+$ logger "A message i want to log"
+
+# to see the log on the screen too do
+$ logger -s "A message that will be shown on screen too"

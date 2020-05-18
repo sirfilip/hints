@@ -1,0 +1,2 @@
+% to declare inline function you can use fun ex
+FallVeolcity = fun(Distance) -> math:sqrt(2 * 9.81 * Distance) end.

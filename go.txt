@@ -85,3 +85,16 @@ $ go test -run=XXX -bench=. -blockprofile=b.p
 //	case int:
 //		fmt.Printf("We have a %T\n", concrete)
 //	}
+
+// if we define method on a pointer and call it from a non pointer it will
+// translate into pointer automatically ex:
+// type Thing struct {
+//   Name string
+// }
+// func (t *Thing) SetName(newName string) {
+//   t.Name = newName
+// }
+// t := Thing{"Swamp"}
+// t.SetName("Updated")
+// fmt.Println(t) # => Thing{"Updated"}
+
