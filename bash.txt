@@ -1,3 +1,17 @@
+# to cancel the text you are writing use
+ctrl-u
+
+# to work in a subshell do
+$(
+ls
+cd
+cd Desktop
+pwd
+)
+
+# to benchmark execution use time
+time ls
+
 # to get help of tests available do
 help test
 

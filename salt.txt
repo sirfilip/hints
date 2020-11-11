@@ -1,0 +1,8 @@
+# to see docs of a module do 
+$ salt '*' sys.doc module_name
+
+# to see all list functions of a module do
+$ salt '*' sys.list_state_functions pkg
+
+# to see docs about a list function do
+$ salt '*' sys.state_doc pkg.removed
