@@ -1,3 +1,21 @@
+# to get all programs listening to tcp connections use
+netstat -lt
+
+# or we can use lsof 
+lsof -nP -iTCP -sTCP:LISTEN
+
+# to trace call do
+traceroute www.google.com
+
+# to check who is the host of a given ip do
+host 8.8.8.8
+
+# to get info about domain do
+dig facebook.com
+
+# to get more info about domain do
+whois facebook.com
+
 # to cancel the text you are writing use
 ctrl-u
 
